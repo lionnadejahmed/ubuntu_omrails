@@ -9,15 +9,15 @@
 <body>
 
 <%= render 'layouts/header'%>
+<%= flash_messages %>
 
 <div class="jumbotron">
 <div class="container-fluid">
+
 	<%= yield %>
 </div>
 </div>
 	<%= render 'layouts/footer'%>
-
-
 
 </body>
 </html>

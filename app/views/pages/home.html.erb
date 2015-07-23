@@ -1,5 +1,7 @@
-
-  <h1>Welcoe to one month rails</h1>
+<% if user_signed_in? %>
+<h1> Welcome to your main page</h1>
+<% else %>
+<h2>Welcome to one month rails</h2>
 <p>
 you found the home page to this site.<br><h3>
 congrats!</h3><br>
@@ -8,14 +10,6 @@ this was base on the teaching of
 <%= link_to "One Month Rails", "http://onemonthrails.com"%>
 </p>
 <p>
-<%= link_to "Sign Up Now", "#", class: "btn btn-primary btn-lg" %>
+<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 </p>
-
-
-
-
-
-
-
-
-
+<% end %>
