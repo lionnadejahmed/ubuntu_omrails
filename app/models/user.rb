@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          #:recoverable, 
          :rememberable, :trackable, :validatable
+
+     #connecting user with pins
+     has_many :pins
 end
